@@ -1,0 +1,7 @@
+README.md
+setup.py
+web_ml_recommender.egg-info/PKG-INFO
+web_ml_recommender.egg-info/SOURCES.txt
+web_ml_recommender.egg-info/dependency_links.txt
+web_ml_recommender.egg-info/requires.txt
+web_ml_recommender.egg-info/top_level.txt

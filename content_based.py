@@ -1,7 +1,7 @@
-
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+
 
 class ContentBasedRecommender:
     def __init__(self, data, feature_column):
@@ -36,10 +36,10 @@ class ContentBasedRecommender:
         """
         if self.cosine_sim is None:
             raise ValueError("The model has not been fitted yet. Call 'fit' before calling 'recommend'.")
-        
+
         idx = self.data.index[self.data['id'] == item_id][0]
         sim_scores = list(enumerate(self.cosine_sim[idx]))
         sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-        sim_scores = sim_scores[1:top_n+1]
+        sim_scores = sim_scores[1:top_n + 1]
         item_indices = [i[0] for i in sim_scores]
         return self.data.iloc[item_indices]
